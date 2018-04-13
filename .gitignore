@@ -31,3 +31,8 @@
 
 /db/schema.rb
 /test/
+
+/.framgia-ci-reports/
+/.framgia-ci-result.temp.yml
+/.drone.yml
+/Dockerfile
