@@ -1,0 +1,71 @@
+<div class="agileits_header">
+  <div class="container">
+    <div class="w3l_offers">
+      <p><%= t "welcome" %> <%= link_to t(".shop_now"), root_path %></p>
+    </div>
+    <div class="agile-login">
+      <ul>
+        <li><%= link_to  t(".register"), sign_up_path %></li>
+        <li><%= link_to  t(".login"), sign_in_path %></li>
+      </ul>
+    </div>
+    <div class="product_list_header">
+      <form action="#" method="post" class="last">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="display" value="1">
+        <button class="w3view-cart" type="submit" name="submit" value="">
+          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="logo_products">
+  <div class="container">
+    <div class="w3ls_logo_products_left1">
+      <ul class="phone_email">
+        <li><i class="fa fa-phone" aria-hidden="true"></i>
+          <%= t ".order_online" %>
+        </li>
+      </ul>
+    </div>
+    <div class="w3ls_logo_products_left">
+      <h1><%= link_to t("book_store"), root_path %></h1>
+    </div>
+    <div class="clearfix"> </div>
+    </div>
+  </div>
+  <div class="navigation-agileits">
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header nav_2">
+          <button type="button" class="navbar-toggle collapsed navbar-toggle1"
+            data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+            <span class="sr-only"><%= t ".toggle_navigation" %></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <%= link_to t("home"), root_path, class: "act" %>
+            </li>
+            <li class="dropdown">
+              <%= link_to "#", class: "dropdown-toggle", toggle: "dropdown" do %>
+                <%= t "category" %>
+                <b class="caret"></b>
+              <% end %>
+            </li>
+            <li><%= link_to t("sale"), "#" %></li>
+            <li><%= link_to t("about"), about_path %></li>
+            <li><%= link_to t("contact"), contact_path %></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
