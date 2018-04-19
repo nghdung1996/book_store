@@ -24,7 +24,6 @@
 
 /config/database.yml
 /config/secrets.yml
-/config/secrets.yml.example
 
 /bin/
 /public/

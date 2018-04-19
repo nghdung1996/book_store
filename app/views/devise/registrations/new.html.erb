@@ -1,0 +1,32 @@
+<div class="log-container">
+  <h2><%= t ".sign-up" %></h2>
+
+  <%= form_for resource, as: resource_name,
+    url: registration_path(resource_name), html:{class: "new-user"} do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, placeholder: t(".name") %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :email, autofocus: true, placeholder: t(".email") %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "off",
+        placeholder: t(".password") %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "off",
+        placeholder: t(".re-enter_password") %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit t(".sign_up"), class: "btn-sign-up" %>
+    </div>
+  <% end %>
+  <span><%= t ".have_account" %></span>
+  <span class="btn-others"><%= render "devise/shared/links" %></span>
+</div>
