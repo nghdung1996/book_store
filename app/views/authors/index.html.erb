@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-2 col-md-offset-1">
+    <ul class="list-item">
+      <% @authors.each do |author| %>
+        <li class="item">
+          <%= link_to author.name, author_path(author), remote: true %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-md-8 list-book"></div>
+</div>

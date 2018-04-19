@@ -12,26 +12,40 @@ en:
   information: "Information"
   layouts:
     header:
-      login: "Login"
+      login: "Log In"
       register: "Create Account"
       shop_now: "SHOP NOW"
       w3layouts: "W3layouts"
       toggle_navigation: "Toggle navigation"
       order_online: "Order online or call us : (+0123) 234 567"
-
+      update: "Update Profile"
+      logout: "Log Out"
+      authors: "Authors"
     footer:
       design_by: "© 2017 BookStore. All rights reserved | Design by"
   static_pages:
     home:
       h1_home: "Welcome to Book Store"
       p_home: "This is homepage"
-
     about:
       h1_about: "StaticPages#about"
       p_about: "Find me in app/views/static_pages/about.html.erb"
     contact:
       h1_contact: "StaticPages#contact"
       p_contact: "Find me in app/views/static_pages/contact.html.erb"
+  book:
+    book:
+      addcart: "Add to cart"
+      author: "Author: "
+      price: "Price: "
+    show:
+      category: "Category"
+      author: "Author"
+      price: "Price"
+      publish_year: "Publish year"
+      addcart: "Add to cart"
+      vnd: "VND"
+      description: "Description"
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:

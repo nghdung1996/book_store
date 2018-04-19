@@ -17,6 +17,9 @@ gem "jbuilder", "~> 2.5"
 gem "mysql2", "~> 0.3.18"
 gem "font-awesome-rails"
 gem "devise"
+gem "faker"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

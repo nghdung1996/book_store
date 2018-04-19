@@ -1,5 +1,9 @@
 scss_files: "app/assets/stylesheets/**"
 exclude:
   - "app/assets/stylesheets/application.css"
+  - "app/assets/stylesheets/bootstrap.min.css"
+  - "app/assets/stylesheets/font-awesome.min.css"
+  - "app/assets/stylesheets/skdslider.min.css"
   - "app/assets/stylesheets/style.min.css"
+  - "app/assets/stylesheets/custom.scss"
   - "vendor/assets/**"

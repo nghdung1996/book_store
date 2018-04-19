@@ -5,8 +5,14 @@
     </div>
     <div class="agile-login">
       <ul>
-        <li><%= link_to  t(".register"), sign_up_path %></li>
-        <li><%= link_to  t(".login"), sign_in_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to t(".update"), edit_user_registration_path %></li>
+          <li><%= link_to t(".logout"), sign_out_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to t(".register"), sign_up_path %></li>
+          <li><%= link_to t(".login"), sign_in_path %></li>
+        <% end %>
+        <li><%= link_to t(".help"), "#" %></a></li>
       </ul>
     </div>
     <div class="product_list_header">
@@ -34,6 +40,17 @@
     <div class="w3ls_logo_products_left">
       <h1><%= link_to t("book_store"), root_path %></h1>
     </div>
+    <div class="w3l_search">
+      <form action="#" method="post">
+        <%= label_tag  %>
+        <input type="search" name="Search" placeholder="Search..." required="">
+        <button type="submit" class="btn btn-default search"
+          aria-label="Left Align">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <div class="clearfix"></div>
+      </form>
+    </div>
     <div class="clearfix"> </div>
     </div>
   </div>
@@ -55,12 +72,12 @@
               <%= link_to t("home"), root_path, class: "act" %>
             </li>
             <li class="dropdown">
-              <%= link_to "#", class: "dropdown-toggle", toggle: "dropdown" do %>
+              <%= link_to "/categories", class: "dropdown-toggle", toggle: "dropdown" do %>
                 <%= t "category" %>
                 <b class="caret"></b>
               <% end %>
             </li>
-            <li><%= link_to t("sale"), "#" %></li>
+            <li><%= link_to t("authors"), authors_path %></li>
             <li><%= link_to t("about"), about_path %></li>
             <li><%= link_to t("contact"), contact_path %></li>
           </ul>
