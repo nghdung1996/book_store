@@ -1,0 +1,29 @@
+<div class="log-container">
+  <h2><%= t ".login" %></h2>
+
+  <%= form_for resource, as: resource_name, url: session_path(resource_name),
+    html:{class: "new-form"}  do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",
+        placeholder: t(".example")  %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "off",
+        placeholder:".........."  %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit t(".login"), class: "btn-log" %>
+    </div>
+  <% end %>
+  <span><%= t ".create" %></span>
+  <span class="btn-others"><%= render "devise/shared/links" %></span>
+</div>

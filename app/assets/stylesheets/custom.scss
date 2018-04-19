@@ -15,7 +15,7 @@ body {
     padding: 15px 40px;
   }
 
-  .new-user {
+  .new-form {
     padding: 0 40px 20px;
 
     .field {
@@ -27,11 +27,12 @@ body {
     }
   }
 
-  .btn-sign-up {
+  .btn-log {
     background: $cornflower-blue;
     border: 0;
     color: $white;
     padding: 10px 20px;
+    margin-top: 10px;
   }
 }
 
