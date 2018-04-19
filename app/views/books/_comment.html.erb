@@ -1,0 +1,6 @@
+<%= comment.user.name %> : <%= comment.content %>
+<% if comment.user.is_current_user? current_user %>
+  <%= link_to t(".delete"), book_comment_path(@book,comment),
+    method: :delete, data: {confirm: t(".are-you-sure")} %>
+<% end %>
+<br>

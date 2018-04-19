@@ -30,6 +30,23 @@
       <%= @book.content %>
     </p>
     <hr>
+    <h3><%= t ".comments" %>:</h3>
+    <%= render partial: "comment", collection: @book.comments %>
+    <br>
+    <% if user_signed_in? %>
+      <h3><%= t ".add-a-new-comment" %>:</h2>
+      <%= form_for [@book, @book.comments.build] do |f| %>
+        <p>
+          <%= f.label :content %><br>
+          <%= f.text_area :content %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    <% else %>
+      <%= link_to t(".login-to-comment"), sign_in_path %>
+    <% end %>
   </div>
   <div class="col-md-8 col-md-offset-2 book-detail">
     <hr>

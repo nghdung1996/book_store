@@ -13,6 +13,7 @@ en:
   book-not-found: "Book not found"
   author-not-found: "Author not found"
   category-not-found: "Category not found"
+  delete: "Delete Comment Completed"
   layouts:
     header:
       login: "Log In"
@@ -50,6 +51,12 @@ en:
       addcart: "Add to cart"
       description: "Description"
       books: "books"
+      login-to-comment: "Login to comment"
+      comments: "Comments"
+      add-a-new-comment: "Add a new comment"
+    comment:
+      delete: "Delete"
+      are-you-sure: "Are you sure?"
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:
