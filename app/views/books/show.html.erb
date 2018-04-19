@@ -5,7 +5,7 @@
         <img src="<%= @book.images.first.image_path %>">
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 book-item" book-id="<%= @book.id %>">
       <h1><%= @book.name %></h1>
       <br>
       <p><b><%= t ".category" %>:</b> <%= @book.category.name %> </p>
@@ -13,12 +13,13 @@
       <p><b><%= t ".publish_year" %>:</b> <%= @book.publish_year %> </p>
       <br>
       <p class="book-price">
-        <%= t ".price" %>: <%= @book.default_price.to_i %> <%= t ".vnd" %>
+        <%= t ".price" %>: <%= @book.default_price.to_i %> $
       </p>
       <br>
       <br>
-      <button class="btn btn-success btn-block"><%= t ".addcart" %></button>
-      <br>
+      <button class="btn btn-success btn-block btn-add-to-cart">
+        Add to cart
+      </button>
     </div>
   </div>
   <div class="col-md-8 col-md-offset-2 book-detail">

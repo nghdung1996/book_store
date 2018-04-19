@@ -1,11 +1,11 @@
 <br>
 <% books.each do |book| %>
-  <div class="book-item col-md-3">
+  <div class="book-item col-md-3" book-id="<%= book.id %>">
     <div><img src="<%= book.images.first.image_path %>" width="100%"></div>
     <p><%= link_to book.name, book_path(book) %></p>
     <p><%= t ".author" %>: <%= book.author.name %></p>
-    <p><%= t ".price" %>: <%= book.default_price.to_i %></p>
-    <%= link_to t(".addcart"), "#" %>
+    <p><%= t ".price" %>: <%= book.default_price.to_i %> $ </p>
+    <%= link_to "Add to cart", cart_path , class: "btn-add-to-cart" %>
   </div>
 <% end %>
 <div class="col-md-12">

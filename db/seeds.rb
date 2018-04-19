@@ -15,7 +15,7 @@ end
 
 100.times do
   book = Book.create name: Faker::Lorem.sentence,
-    publish_year: rand(1990..2017), default_price: 265656,
+    publish_year: rand(1990..2017), default_price: rand(3..50),
     content: Faker::Lorem.sentence(100), category_id: rand(1..10),
     author_id: rand(1..10)
 

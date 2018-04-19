@@ -46,6 +46,7 @@ en:
       addcart: "Add to cart"
       vnd: "VND"
       description: "Description"
+    show:
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:

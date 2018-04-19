@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 book-detail">
+    <div class="row">
+      <div class="col-md-6">
+        Total books (<%= @total_quantity %>)
+      </div>
+    </div>
+    <hr>
+    <table class="table table-bordered">
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total price</th>
+      </tr>
+      <% @books.each do |book| %>
+        <tr book-id="<%= book.id %>">
+          <td>
+            <img src="<%= book.images.first.image_path %>" width="40px">
+          </td>
+          <td><%= link_to book.name, book_path(book) %></td>
+          <td>
+          <div class="actions input-group btn-block" style="max-width: 150px;">
+            <input value="<%= session[:cart][book.id.to_s] %>"
+              size="1" class="form-control" type="number" >
+            <span class="input-group-btn">
+              <button class="btn btn-primary btn-update-quantity">
+                <i class="fa fa-refresh"></i>
+              </button>
+              <button class="btn btn-danger btn-delete-book" >
+                <i class="fa fa-remove"></i>
+              </button>
+            </span>
+          </div>
+          </td>
+          <td><%= book.default_price.to_i %> $</td>
+          <td>
+            <%= (book.default_price*session[:cart][book.id.to_s]).to_i %> $
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    Total:
+  </div>
+</div>
