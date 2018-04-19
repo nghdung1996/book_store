@@ -1,0 +1,9 @@
+<div class="book-item col-md-3">
+  <br>
+  <div><img src="<%= book.images.first.image_path %>" width="100%"></div>
+  <p><%= link_to book.name, book_path(book) %></p>
+  <p><%= t ".author" %>: <%= book.author.name %></p>
+  <p><%= t ".price" %>: <%= book.default_price.to_i %>
+    <%= Settings.currency.usa %></p>
+  <%= link_to t(".addcart"), "#" %>
+</div>

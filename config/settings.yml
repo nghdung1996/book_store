@@ -1,0 +1,9 @@
+max_page: 12
+author:
+  max_page: 8
+category:
+  max_page: 8
+relation_book:
+  max_page: 4
+currency:
+  usa: $
