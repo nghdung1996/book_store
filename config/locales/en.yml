@@ -14,6 +14,7 @@ en:
         rusure: "Are you sure?"
         back: "Back"
         update: "Update"
+        logout: "Logout"
       new:
         sign_up: "Sign up"
         name: "Name"
@@ -25,3 +26,8 @@ en:
       links:
         login: "Log in"
         signup: "Sign up"
+    sessions:
+      new:
+        example: "example@gmail.com"
+        login: "Log in"
+        create: "Create a new account"
