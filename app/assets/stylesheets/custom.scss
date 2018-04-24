@@ -1,8 +1,6 @@
+@import 'bootstrap';
+@import 'font-awesome';
 @import 'color';
-
-body {
-  background: $athens-gray;
-}
 
 .log-container {
   background: $white;
@@ -10,30 +8,29 @@ body {
   border-top: 3px solid $cornflower-blue;
   margin: auto;
   width: 600px;
+}
 
-  h2 {
-    padding: 15px 40px;
+h2 {
+  padding: 15px 40px;
+  text-align: center;
+}
+
+.new-form {
+  padding: 0 40px 20px;
+
+  .field input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 97%;
   }
+}
 
-  .new-form {
-    padding: 0 40px 20px;
-
-    .field {
-      input {
-        margin-bottom: 10px;
-        padding: 8px;
-        width: 97%;
-      }
-    }
-  }
-
-  .btn-log {
-    background: $cornflower-blue;
-    border: 0;
-    color: $white;
-    padding: 10px 20px;
-    margin-top: 10px;
-  }
+.btn-log {
+  background: $cornflower-blue;
+  border: 0;
+  color: $white;
+  margin-top: 10px;
+  padding: 10px 20px;
 }
 
 .btn-others {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookStore</title>
+    <title><%= yield :title %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application",
@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

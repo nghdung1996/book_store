@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     get "/sign_in",   to: "devise/sessions#new"
     post "/sign_in",   to: "devise/sessions#create"
   end
+  root "static_pages#home", page: "home"
+  get "/about" => "static_pages#about"
+  get "/contact" => "static_pages#contact"
 end
