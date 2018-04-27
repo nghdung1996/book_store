@@ -1,0 +1,57 @@
+<div class="row book-detail-container">
+  <div class="col-md-8 col-md-offset-2 book-detail">
+    <div class="col-md-4">
+      <div class="image-first" >
+        <img src="<%= @book.images.first.image_path %>">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h1><%= @book.name %></h1>
+      <br>
+      <p><b><%= t ".category" %>:</b> <%= @book.category.name %> </p>
+      <p><b><%= t ".author" %>:</b> <%= @book.author.name %> </p>
+      <p><b><%= t ".publish_year" %>:</b> <%= @book.publish_year %> </p>
+      <br>
+      <p class="book-price">
+        <%= t ".price" %>: <%= @book.default_price.to_i %>
+          <%= Settings.currency.usa %>
+      </p>
+      <br>
+      <br>
+      <button class="btn btn-success btn-block"><%= t ".addcart" %></button>
+      <br>
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2 book-detail">
+    <hr>
+    <h3><%= t ".description" %></h3>
+    <br>
+    <p>
+      <%= @book.content %>
+    </p>
+    <hr>
+  </div>
+  <div class="col-md-8 col-md-offset-2 book-detail">
+    <hr>
+    <h3><%= @book.category.name %> <%= t ".books" %></h3>
+    <br>
+    <div class="col-md-12" >
+      <%= render partial: "book", collection: @relation_books[:category] %>
+    </div>
+    <div class="col-md-8">
+      <%= will_paginate @relation_books[:category],
+        param_name: :category_page %>
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2 book-detail">
+    <hr>
+    <h3><%= @book.author.name %> <%= t ".books" %></h3>
+    <br>
+    <div class="col-md-12" >
+      <%= render partial: "book", collection: @relation_books[:author] %>
+    </div>
+    <div class="col-md-8">
+      <%= will_paginate @relation_books[:author], param_name: :author_page %>
+    </div>
+  </div>
+</div>

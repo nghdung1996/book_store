@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
     if valid_page?
+      @books = Book.paginate page: params[:page], per_page: Settings.max_page
+
       render "static_pages/#{params_page}"
     else
       render file: "public/404.html", status: :not_found
@@ -19,6 +21,6 @@ class StaticPagesController < ApplicationController
   end
 
   def params_page
-    params[:page]
+    params[:p]
   end
 end

@@ -28,7 +28,10 @@ RemoveUnusedMethodsInControllersCheck: {
     RegistrationsController#create,
     StaticPagesController#home,
     StaticPagesController#about,
-    StaticPagesController#contact
+    StaticPagesController#contact,
+    AuthorsController#index,
+    CategoriesController#index,
+    BooksController#index
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
