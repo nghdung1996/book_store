@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get "/contact" => "static_pages#contact"
   resources :categories
   resources :authors
-  resources :books
+  resources :books do
+    resources :comments
+  end
 end
