@@ -5,7 +5,7 @@
         <img src="<%= @book.images.first.image_path %>">
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="book-item col-md-8" book-id="<%= @book.id %>">
       <h1><%= @book.name %></h1>
       <br>
       <p><b><%= t ".category" %>:</b> <%= @book.category.name %> </p>
@@ -18,7 +18,8 @@
       </p>
       <br>
       <br>
-      <button class="btn btn-success btn-block"><%= t ".addcart" %></button>
+      <%= button_tag t(".addcart"),
+        class: "btn btn-success btn-block btn-add-to-cart" %>
       <br>
     </div>
   </div>
@@ -31,7 +32,8 @@
     </p>
     <hr>
     <h3><%= t ".comments" %>:</h3>
-    <%= render partial: "comment", collection: @book.comments %>
+    <%= render partial: "comment", collection: @book.comments,
+      locals: {book: @book} %>
     <br>
     <% if user_signed_in? %>
       <h3><%= t ".add-a-new-comment" %>:</h2>

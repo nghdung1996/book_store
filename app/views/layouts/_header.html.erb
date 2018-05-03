@@ -16,7 +16,7 @@
       </ul>
     </div>
     <div class="product_list_header">
-      <%= form_tag("#", class: "last") do %>
+      <%= form_tag(cart_path, class: "last", method: :get) do %>
         <%= button_tag(type: "submit", class: "w3view-cart") do %>
           <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
         <% end %>

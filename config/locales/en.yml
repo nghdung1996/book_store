@@ -14,6 +14,12 @@ en:
   author-not-found: "Author not found"
   category-not-found: "Category not found"
   delete: "Delete Comment Completed"
+  book-has-line-item: "This book has a line items"
+  are-you-sure: "Are you sure?"
+  add-successfully-into-cart: "Add successfuly book into cart"
+  total_book:
+    one: "Total book (%{count})"
+    other: "Total books (%{count})"
   layouts:
     header:
       login: "Log In"
@@ -57,6 +63,13 @@ en:
     comment:
       delete: "Delete"
       are-you-sure: "Are you sure?"
+  carts:
+    show:
+      image: "Image"
+      name: "Name"
+      quantity: "Quantity"
+      price: "Price"
+      total-price: "Total Price"
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:

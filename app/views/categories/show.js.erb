@@ -1,2 +1,2 @@
-$('.list-book').html('<%= j render "books" %>');
+$('.list-book').html('<%= j render "books", books: @books %>');
 $('.pagination a').attr('data-remote', 'true');
