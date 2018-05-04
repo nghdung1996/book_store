@@ -31,7 +31,8 @@ RemoveUnusedMethodsInControllersCheck: {
     StaticPagesController#contact,
     AuthorsController#index,
     CategoriesController#index,
-    BooksController#index
+    BooksController#index,
+    CartsController#update,
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
