@@ -6,3 +6,8 @@ exclude_paths:
   - 'db/migrate'
 FeatureEnvy:
   enabled: false
+TooManyStatements:
+  enabled: true
+  exclude:
+  - initialize
+  max_statements: 10

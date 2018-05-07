@@ -15,3 +15,7 @@ end
     book.images.create image_path: "/images/howtowin.jpg"
   end
 end
+
+User.create email:"nguyenhuydung@gmail.com", name: "nghdung",
+  full_name: "Nguyen Huy Dung", address: "Di Nau, TT, HN", phone: "0964530265",
+  password: "123123", password_confirmation: "123123"

@@ -61,6 +61,10 @@ module CartHelper
     session[:cart][book_id.to_s]
   end
 
+  def reset_session_cart
+    session[:cart] = {}
+  end
+
   private
 
   def init_session_cart

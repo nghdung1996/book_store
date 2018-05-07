@@ -17,11 +17,17 @@
       <%= render partial: "line_item", collection: cart_items %>
       <tr class="total_line">
         <td colspan="3"></td>
-        <td ><%= t ".total" %></td>
+        <td><b><%= t ".total" %></b></td>
         <td class="total_cell">
-          <%= total_price_of_items %> <%= Settings.currency.usa %>
+          <b><%= total_price_of_items %> <%= Settings.currency.usa %></b>
         </td>
       </tr>
     </table>
+    <div class="col-md-12 text-right">
+      <%= link_to t(".back"), root_path,
+        class: "btn btn-default btn-checkout" %>
+      <%= link_to t(".checkout"), checkout_path,
+        class: "btn btn-success btn-checkout" %>
+    </div>
   </div>
 </div>

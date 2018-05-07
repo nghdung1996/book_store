@@ -17,6 +17,10 @@ en:
   book-has-line-item: "This book has a line items"
   are-you-sure: "Are you sure?"
   add-successfully-into-cart: "Add successfuly book into cart"
+  view: "View"
+  order: "ORDER"
+  must-accept-bill: "You must add books to cart and
+    enter the full information before checkout"
   total_book:
     one: "Total book (%{count})"
     other: "Total books (%{count})"
@@ -32,6 +36,7 @@ en:
       logout: "Log Out"
       authors: "Authors"
       search: "Search..."
+      order-history: "Order History"
     footer:
       design_by: "© 2017 BookStore. All rights reserved | Design by"
   static_pages:
@@ -70,6 +75,8 @@ en:
       quantity: "Quantity"
       price: "Price"
       total-price: "Total Price"
+      back: "Back"
+      checkout: "Checkout"
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:
@@ -101,3 +108,31 @@ en:
         example: "example@gmail.com"
         login: "Log in"
         create: "Create a new account"
+  checkouts:
+    show:
+      books: "Books"
+      profile: "Profile"
+      payment-type: "Payment type"
+      cod: "COD"
+  bills:
+    index:
+      bill-code: "Bill code"
+      create-date: "Created date"
+      books: "Books"
+      total-price: "Total price"
+      detail: "Detail"
+      my-bills: "My Bills"
+    show:
+      infor-address: "INFO ADDRESS"
+      address: "Address"
+      phone: "Phone"
+      email: "Email"
+      book-ordered: "Books ORDERED"
+      book: "Book"
+      price: "Price"
+      quantity: "Quantity"
+      total-price: "Total Price"
+      bill-detail: "Bill detail"
+  time:
+    formats:
+      time_default: "%H:%M:%S %Y-%m-%d"

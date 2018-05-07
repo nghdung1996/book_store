@@ -4,18 +4,18 @@
   </td>
   <td><%= link_to line_item.name, book_path(line_item) %></td>
   <td>
-  <div class="actions input-group btn-block input-quantity" >
-    <input value="<%= get_session_cart line_item.id %>"
-      size="1" class="form-control" type="number" >
-    <span class="input-group-btn">
-      <button class="btn btn-primary btn-update-quantity">
-        <i class="fa fa-refresh"></i>
-      </button>
-      <button class="btn btn-danger btn-delete-book" >
-        <i class="fa fa-remove"></i>
-      </button>
-    </span>
-  </div>
+    <div class="actions input-group btn-block input-quantity" >
+      <input value="<%= get_session_cart line_item.id %>"
+        size="1" class="form-control" type="number" >
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-update-quantity">
+          <i class="fa fa-refresh"></i>
+        </button>
+        <button class="btn btn-danger btn-delete-book" >
+          <i class="fa fa-remove"></i>
+        </button>
+      </span>
+    </div>
   </td>
   <td>
     <%= line_item.default_price.to_i %> <%= Settings.currency.usa %>
