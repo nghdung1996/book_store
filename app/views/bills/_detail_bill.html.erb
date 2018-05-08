@@ -1,0 +1,7 @@
+<div class="line-item-book">
+  <span class="book-quantity">
+    <b><%= detail_bill.quantity %></b>
+  </span>
+  <%= link_to detail_bill.book.name.truncate(80),
+    book_path(detail_bill.book) %>
+</div>
