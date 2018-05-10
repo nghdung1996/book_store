@@ -12,7 +12,8 @@ class Book < ApplicationRecord
 
   delegate :image, to: :image_first, allow_nil: true
 
-  scope :order_desc, ->{order id: :desc}
+  scope :order_desc, ->{order created_at: :desc}
+
   scope :show_relation_book, (lambda do |id, page|
     where.not(id: id).paginate page: page,
       per_page: Settings.relation_book.max_page

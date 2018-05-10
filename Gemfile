@@ -22,6 +22,9 @@ gem "will_paginate"
 gem "bootstrap-will_paginate"
 gem "config"
 gem "i18n-js"
+gem "carrierwave"
+gem "mini_magick"
+gem "bootstrap-glyphicons"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

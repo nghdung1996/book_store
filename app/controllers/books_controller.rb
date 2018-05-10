@@ -2,7 +2,8 @@ class BooksController < ApplicationController
   before_action :find_book, only: %i(show)
 
   def index
-    @books = Book.paginate page: params[:page], per_page: Settings.max_page
+    @books = Book.order_desc.paginate page: params[:page],
+      per_page: Settings.max_page
   end
 
   def show
