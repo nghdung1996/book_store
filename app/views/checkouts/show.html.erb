@@ -35,7 +35,7 @@
 
           <div class="form-group">
             <%= f.label :email %>
-            <%= f.text_field :email, value: current_user.email,
+            <%= f.text_field :email, value: current_user.email, readonly: true,
               class: "form-control" %>
           </div>
         </div>
