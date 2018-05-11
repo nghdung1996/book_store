@@ -1,0 +1,17 @@
+<%= link_to t(".create-categogy"), new_admin_category_path %>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <table id="mytable" class="table table-bordred table-striped">
+      <thead>
+        <th><%= t "category" %></th>
+        <th><%= t "edit" %></th>
+        <th><%= t "delete" %></th>
+      </thead>
+      <tbody>
+        <%= render partial: "category", collection: @categories %>
+      </tbody>
+    </table>
+    <%= will_paginate @categories %>
+  </div>
+</div>

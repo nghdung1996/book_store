@@ -27,8 +27,14 @@ en:
   has_book:
     one: "has %{count} book"
     other: "has %{count} books"
-  update-successfully: "Update successfuly"
-  create-successfully: "Create successfuly"
+  total_error:
+    one: "The form contains %{count} error"
+    other: "The form contains %{count} errors"
+  update_successfully: "Update successfuly"
+  create_successfully: "Create successfuly"
+  book_not_found: "Book is not found"
+  author_not_found: "Author is not found"
+  category_not_found: "Category is not found"
   check-authorize: "You are not authorized to access this site"
   book: "book"
   create: "Create"
@@ -46,8 +52,8 @@ en:
   menu_books: " Books"
   authors: " Authors"
   categories: " Categories"
-  delete-successfully: "Delete successfuly"
-  can't-delete: "Can't Delete"
+  delete_successfully: "Delete successfuly"
+  can_not_delete: "Can't Delete"
   layouts:
     header:
       login: "Log In"

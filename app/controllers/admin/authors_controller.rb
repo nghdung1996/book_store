@@ -22,7 +22,8 @@ module Admin
     end
 
     def show
-      @books = author.books.order_desc.paginate page: params[:page],
+      @books = author.books.preload(:category,
+        :images).order_desc.paginate page: params[:page],
         per_page: Settings.admin_list.max_page
     end
 
@@ -30,7 +31,7 @@ module Admin
 
     def update
       if author.update_attributes(admin_author_params)
-        flash[:success] = t "update-successfully"
+        flash[:success] = t "update_successfully"
         redirect_to admin_authors_path
       else
         render :edit
@@ -39,9 +40,9 @@ module Admin
 
     def destroy
       if author.destroy
-        flash[:success] = t "delete-successfully"
+        flash[:success] = t "delete_successfully"
       else
-        flash[:danger] = t "can't-delete"
+        flash[:danger] = t "can_not_delete"
       end
       redirect_to admin_authors_path
     end
@@ -57,7 +58,7 @@ module Admin
     def find_author
       @author = Author.find_by id: params[:id]
       return if author
-      flash[:danger] = t "author-not-found"
+      flash[:danger] = t "author_not_found"
       redirect_to admin_authors_path
     end
   end

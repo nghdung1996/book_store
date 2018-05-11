@@ -13,3 +13,14 @@ text_area:
   row: 5
 author:
   description: 80
+book:
+  content: 100
+  name: 40
+checkout:
+  book_name: 30
+cart:
+  book_name: 80
+bill:
+  book_name: 50
+accept_images:
+  image_type: "image/png, image/jpeg, image/jpg, image/gif"
