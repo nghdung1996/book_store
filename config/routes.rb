@@ -19,4 +19,11 @@ Rails.application.routes.draw do
   end
   resource :cart
   resource :checkout
+
+  namespace :admin do
+    resources :authors
+    resources :categories
+    resources :books
+  end
+  get "admin", to: "admin/static_pages#index"
 end

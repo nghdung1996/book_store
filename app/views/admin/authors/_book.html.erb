@@ -1,0 +1,19 @@
+<tr>
+  <td>
+    <img src="<%= book.image %>" class="book-size" >
+  </td>
+  <td><%= link_to book.name, book_path(book) %></td>
+  <td>
+    <%= link_to book.category.name, admin_category_path(book.category) %>
+  </td>
+  <td><%= book.default_price %></td>
+  <td>
+    <%= link_to "", edit_admin_book_path(book),
+      class: "btn btn-primary btn-xs glyphicon glyphicon-pencil" %>
+  </td>
+  <td>
+    <%= link_to "", admin_book_path(book), method: :delete,
+      class: "btn btn-danger btn-xs glyphicon glyphicon-trash",
+      data: {confirm: t("are-you-sure")} %>
+  </td>
+</tr>

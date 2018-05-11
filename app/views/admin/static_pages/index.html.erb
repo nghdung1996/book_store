@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= link_to admin_books_path do %>
+        <%= image_tag "/images/books.png", class: "admin-list" %>
+        <div class="caption text-center">
+          <p><%= t "menu_books" %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= link_to admin_authors_path do %>
+        <%= image_tag "/images/author.jpg", class: "admin-list" %>
+        <div class="caption text-center">
+          <p><%= t "authors" %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= link_to admin_categories_path do %>
+        <%= image_tag "/images/categories.jpg", class: "admin-list" %>
+        <div class="caption text-center">
+          <p><%= t "categories" %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
