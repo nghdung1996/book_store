@@ -1,0 +1,11 @@
+<%= form_for [:admin, category] do |f| %>
+  <%= render "admin/shared/error_massage", object: category %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= f.submit t("create"), class: "btn btn-default" %>
+  <%= link_to t("back"), admin_categories_path, class: "btn" %>
+
+<% end %>

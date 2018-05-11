@@ -7,3 +7,7 @@ relation_book:
   max_page: 4
 currency:
   usa: $
+admin_list:
+  max_page: 10
+text_area:
+  row: 5

@@ -5,4 +5,8 @@ class User < ApplicationRecord
   has_many :bills, dependent: :destroy
   has_many :rates, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  def is_current_user? user
+    self == user
+  end
 end

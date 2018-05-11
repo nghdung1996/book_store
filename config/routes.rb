@@ -13,5 +13,17 @@ Rails.application.routes.draw do
   get "/contact" => "static_pages#contact"
   resources :categories
   resources :authors
-  resources :books
+  resources :bills
+  resources :books do
+    resources :comments
+  end
+  resource :cart
+  resource :checkout
+
+  namespace :admin do
+    resources :books
+    resources :categories
+    resources :authors
+  end
+  get "admin", to: "admin/static_pages#index"
 end

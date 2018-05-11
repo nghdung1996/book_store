@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-4">
+      <div class="background-fff profile-container">
+        <div class="title"><%= t ".books" %></div>
+        <div class="">
+          <ul class="list-group">
+            <%= render partial: "line_item", collection: cart_items %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <%= form_for @bill do |f| %>
+      <div class="col-md-4">
+        <div class="background-fff profile-container">
+          <div class="title"><%= t ".profile" %></div>
+
+          <div class="form-group">
+            <%= f.label :full_name %>
+            <%= f.text_field :full_name, value: current_user.full_name,
+              class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :address %>
+            <%= f.text_field :address, value: current_user.address,
+              class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :phone %>
+            <%= f.text_field :phone, value: current_user.phone,
+              class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, value: current_user.email, readonly: true,
+              class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="background-fff profile-container">
+          <div class="title"><%= t ".payment-type" %></div>
+          <div class="">
+            <div class="form-check">
+              <%= f.radio_button :payment_type, "1", checked: true,
+                class: "form-check-input" %>
+              <%= f.label :payment_type, t(".cod"),
+                class: "form-check-label" %>
+            </div>
+            <div class="text-center">
+              <%= f.submit t("order"), class: "btn btn-primary btn-order" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

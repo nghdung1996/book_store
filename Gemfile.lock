@@ -61,6 +61,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-glyphicons (0.0.1)
+      railties (>= 3.0)
+      sass (>= 3.2)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -79,6 +82,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     code_analyzer (0.4.8)
@@ -151,6 +158,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.5)
+      i18n (>= 0.6.6, < 2)
     ice_nine (0.11.2)
     inflecto (0.0.2)
     jbuilder (2.7.0)
@@ -176,6 +185,10 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_magick (4.8.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -317,12 +330,14 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bootstrap-glyphicons
   bootstrap-sass
   bootstrap-will_paginate
   brakeman
   bundler-audit
   byebug
   capybara (~> 2.13)
+  carrierwave
   coffee-rails (~> 4.2)
   config
   database_cleaner
@@ -330,10 +345,12 @@ DEPENDENCIES
   eslint-rails!
   faker
   font-awesome-rails
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   jshint
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   mysql2 (~> 0.3.18)
   puma (~> 3.7)
   railroady

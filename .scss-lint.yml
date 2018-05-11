@@ -5,4 +5,5 @@ exclude:
   - "app/assets/stylesheets/font-awesome.min.css"
   - "app/assets/stylesheets/skdslider.min.css"
   - "app/assets/stylesheets/style.min.css"
+  - "app/assets/stylesheets/layout_admin.min.css"
   - "vendor/assets/**"

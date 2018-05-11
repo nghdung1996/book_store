@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2 class="title"><%= t ".my-bills" %></h2>
+    <div class="background-fff">
+      <table class="table table-bordered">
+        <tr>
+          <th><%= t ".bill-code" %></th>
+          <th><%= t ".create-date" %></th>
+          <th><%= t ".books" %></th>
+          <th><%= t ".total-price" %></th>
+          <th><%= t ".detail" %></th>
+        </tr>
+        <%= render partial: "bill", collection: @bills %>
+      </table>
+    </div>
+  </div>
+</div>

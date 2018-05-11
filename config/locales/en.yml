@@ -13,6 +13,33 @@ en:
   book-not-found: "Book not found"
   author-not-found: "Author not found"
   category-not-found: "Category not found"
+  delete: "Delete Comment Completed"
+  book-has-line-item: "This book has a line items"
+  are-you-sure: "Are you sure?"
+  add-successfully-into-cart: "Add successfuly book into cart"
+  view: "View"
+  order: "ORDER"
+  must-accept-bill: "You must add books to cart and
+    enter the full information before checkout"
+  update-successfully: "Update successfuly"
+  create-successfully: "Create successfuly"
+  check-authorize: "You are not authorized to access this site"
+  book: "book"
+  create: "Create"
+  update: "Update"
+  back: "Back"
+  edit: "Edit"
+  delete: "Delete"
+  has: "has"
+  name: "Name"
+  image: "Image"
+  total_book:
+    one: "Total book (%{count})"
+    other: "Total books (%{count})"
+  dashboard: " Dashboard"
+  menu_books: " Books"
+  authors: " Authors"
+  categories: " Categories"
   layouts:
     header:
       login: "Log In"
@@ -25,8 +52,17 @@ en:
       logout: "Log Out"
       authors: "Authors"
       search: "Search..."
+      order-history: "Order History"
+      admin: "Admin"
     footer:
       design_by: "© 2017 BookStore. All rights reserved | Design by"
+    footer_admin:
+      copy-right: "Copyright 2018"
+      book-store: "Book Store"
+    header_admin:
+      book_store_admin: "Book Store Admin"
+      home_store: "Home Store"
+      log_out: "Log out"
   static_pages:
     home:
       h1_home: "Welcome to Book Store"
@@ -50,6 +86,21 @@ en:
       addcart: "Add to cart"
       description: "Description"
       books: "books"
+      login-to-comment: "Login to comment"
+      comments: "Comments"
+      add-a-new-comment: "Add a new comment"
+    comment:
+      delete: "Delete"
+      are-you-sure: "Are you sure?"
+  carts:
+    show:
+      image: "Image"
+      name: "Name"
+      quantity: "Quantity"
+      price: "Price"
+      total-price: "Total Price"
+      back: "Back"
+      checkout: "Checkout"
   signed_up: "Welcome! You have signed up successfully."
   devise:
     registrations:
@@ -81,3 +132,59 @@ en:
         example: "example@gmail.com"
         login: "Log in"
         create: "Create a new account"
+  checkouts:
+    show:
+      books: "Books"
+      profile: "Profile"
+      payment-type: "Payment type"
+      cod: "COD"
+  bills:
+    index:
+      bill-code: "Bill code"
+      create-date: "Created date"
+      books: "Books"
+      total-price: "Total price"
+      detail: "Detail"
+      my-bills: "My Bills"
+    show:
+      infor-address: "INFO ADDRESS"
+      address: "Address"
+      phone: "Phone"
+      email: "Email"
+      book-ordered: "Books ORDERED"
+      book: "Book"
+      price: "Price"
+      quantity: "Quantity"
+      total-price: "Total Price"
+      bill-detail: "Bill detail"
+  time:
+    formats:
+      time_default: "%H:%M:%S %Y-%m-%d"
+  admin:
+    authors:
+      edit:
+        edit-author: "Edit Author"
+      index:
+        create-author: "Create Author"
+        description: "Description"
+      new:
+        create-a-new-author: "Create a new author"
+    books:
+      edit:
+        edit-book: "Edit book"
+      index:
+        create-book: "Create book"
+        publish-year: "Publish year"
+        author: "Author"
+        category: "Category"
+        default-price: "Default price"
+        content: "Content"
+      new:
+        create-a-new-book: "Creat a new book"
+    categories:
+      edit:
+        edit-category: "Edit category"
+      index:
+        create-categogy: "Create Category"
+      new:
+        create-a-new-category: "Create a new category"

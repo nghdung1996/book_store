@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 book-detail">
+    <div class="row">
+      <div class="col-md-6">
+        <%= t :total_book, count: cart_total_item %>
+      </div>
+    </div>
+    <hr>
+    <table class="table table-bordered">
+      <tr>
+        <th><%= t ".image" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".quantity" %></th>
+        <th><%= t ".price" %></th>
+        <th><%= t ".total-price" %></th>
+      </tr>
+      <%= render partial: "line_item", collection: cart_items %>
+      <tr class="total_line">
+        <td colspan="3"></td>
+        <td><b><%= t ".total" %></b></td>
+        <td class="total_cell">
+          <b><%= total_price_of_items %> <%= Settings.currency.usa %></b>
+        </td>
+      </tr>
+    </table>
+    <div class="col-md-12 text-right">
+      <%= link_to t(".back"), root_path,
+        class: "btn btn-default btn-checkout" %>
+      <%= link_to t(".checkout"), checkout_path,
+        class: "btn btn-success btn-checkout" %>
+    </div>
+  </div>
+</div>

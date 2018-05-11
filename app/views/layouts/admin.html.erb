@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield :title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application_admin",
+      media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render "layouts/header_admin" %>
+    <%= render "layouts/menu_admin" %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
+    <% end %>
+    <div class="col-md-10 content">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <%= t "dashboard" %>
+          </div>
+          <div class="panel-body">
+            <%= yield %>
+          </div>
+        </div>
+    </div>
+    <%= render "layouts/footer_admin" %>
+  </body>
+</html>

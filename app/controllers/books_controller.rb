@@ -2,14 +2,15 @@ class BooksController < ApplicationController
   before_action :find_book, only: %i(show)
 
   def index
-    @books = Book.paginate page: params[:page], per_page: Settings.max_page
+    @books = Book.order_desc.paginate page: params[:page],
+      per_page: Settings.max_page
   end
 
   def show
     @relation_books = {
-      category: book.category.books.show_relation_book(params_id,
+      category: book.category.books.order_desc.show_relation_book(params_id,
         params[:category_page]),
-      author: book.author.books.show_relation_book(params_id,
+      author: book.author.books.order_desc.show_relation_book(params_id,
         params[:author_page])
     }
   end
