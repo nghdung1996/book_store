@@ -9,6 +9,9 @@
           <li><%= link_to t(".update"), edit_user_registration_path %></li>
           <li><%= link_to t(".logout"), sign_out_path %></li>
           <li><%= link_to t(".order-history"), bills_path %></a></li>
+          <% if current_user.admin %>
+            <li><%= link_to t(".admin"), admin_path %></a></li>
+          <% end %>
         <% else %>
           <li><%= link_to t(".register"), sign_up_path %></li>
           <li><%= link_to t(".login"), sign_in_path %></li>

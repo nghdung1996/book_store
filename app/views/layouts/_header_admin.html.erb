@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to t(".book_store_admin"), admin_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <%= link_to t(".home_store"), root_path %>
+        </li>
+        <li class="dropdown ">
+          <%= link_to t(".log_out"), sign_out_path %>
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>
