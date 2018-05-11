@@ -6,7 +6,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
-    @books = author.books.paginate page: params[:page],
+    @books = author.books.order_desc.paginate page: params[:page],
       per_page: Settings.author.max_page
   end
 

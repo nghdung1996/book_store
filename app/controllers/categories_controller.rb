@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @books = category.books.paginate page: params[:page],
+    @books = category.books.order_desc.paginate page: params[:page],
       per_page: Settings.category.max_page
   end
 

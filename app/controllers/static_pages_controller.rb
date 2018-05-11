@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
     if valid_page?
-      @books = Book.paginate page: params[:page], per_page: Settings.max_page
+      @books = Book.order_desc.paginate page: params[:page],
+        per_page: Settings.max_page
 
       render "static_pages/#{params_page}"
     else
