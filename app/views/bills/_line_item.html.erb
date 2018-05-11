@@ -1,8 +1,7 @@
 <tr>
   <td>
-    <img src="<%= line_item.book.images.first.image_path %>"
-      width="60px" height="80px" >
-    <%= line_item.book.name %>
+    <img src="<%= line_item.book.image %>" class= "bill-book-size" >
+    <%= line_item.book.name.truncate(60) %>
   </td>
   <td><%= line_item.book.default_price %> <%= Settings.currency.usa %></td>
   <td><%= line_item.quantity %></td>

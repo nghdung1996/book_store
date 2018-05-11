@@ -43,8 +43,22 @@ h2 {
   font-style: italic;
 }
 
+.view-book {
+  background: $white;
+  height: 410px;
+  margin: 0 10px 10px 0;
+  width: 23.5%;
+}
+
 .book-item {
-  height: 500px;
+  position: relative;
+}
+
+.btn-add-to-cart {
+  bottom: 10px;
+  left: 50px;
+  position: absolute;
+  width: 50%;
 }
 
 .book-detail {
@@ -149,4 +163,14 @@ label {
     font-weight: bold;
     text-transform: uppercase;
   }
+}
+
+.book-size {
+  width: 100%;
+  height: 200px;
+}
+
+.bill-book-size {
+  width: 60px;
+  height: 80px;
 }

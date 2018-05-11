@@ -20,7 +20,9 @@ class BillsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @line_items = bill.detail_bills.preload(:book)
+  end
 
   private
 

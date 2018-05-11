@@ -31,7 +31,7 @@
               <th><%= t ".quantity" %></th>
               <th><%= t ".total-price" %></th>
             </tr>
-            <%= render partial: "line_item", collection: @bill.detail_bills %>
+            <%= render partial: "line_item", collection: @line_items %>
           </table>
         </div>
         <div class="text-right">

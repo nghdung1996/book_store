@@ -1,8 +1,8 @@
 <tr book-id="<%= line_item.id %>">
   <td>
-    <img src="<%= line_item.images.first.image_path %>" class= "image">
+    <img src="<%= line_item.image %>" class= "image">
   </td>
-  <td><%= link_to line_item.name, book_path(line_item) %></td>
+  <td><%= link_to line_item.name.truncate(80), book_path(line_item) %></td>
   <td>
     <div class="actions input-group btn-block input-quantity" >
       <input value="<%= get_session_cart line_item.id %>"
