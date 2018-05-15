@@ -22,4 +22,12 @@ class Book < ApplicationRecord
   def image_first
     images.first
   end
+
+  def save_image imgs
+    imgs.each do |image|
+      Image.transaction do
+        images.create! image: image
+      end
+    end if imgs
+  end
 end

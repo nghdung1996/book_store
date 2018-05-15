@@ -1,0 +1,25 @@
+<%= link_to t(".creat-book"), new_admin_book_path %>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <table id="mytable" class="table table-bordred table-striped">
+      <thead>
+        <tr>
+          <th><%= t "image" %></th>
+          <th><%= t "name" %></th>
+          <th><%= t ".publish-year" %></th>
+          <th><%= t ".author" %></th>
+          <th><%= t ".category" %></th>
+          <th><%= t ".default-price" %>(<%= Settings.currency.usa %>)</th>
+          <th><%= t ".content" %></th>
+          <th><%= t "edit" %></th>
+          <th><%= t "delete" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "book", collection: @books %>
+      </tbody>
+    </table>
+    <%= will_paginate @books %>
+  </div>
+</div>

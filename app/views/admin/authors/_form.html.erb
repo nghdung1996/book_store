@@ -1,4 +1,5 @@
 <%= form_for [:admin, author] do |f| %>
+  <%= render "admin/shared/error_messages", object: author %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %>

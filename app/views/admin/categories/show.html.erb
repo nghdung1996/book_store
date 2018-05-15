@@ -1,0 +1,22 @@
+<h2><%= @category.name %></h2>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <table id="mytable" class="table table-bordred table-striped">
+      <thead>
+        <tr>
+          <th><%= t "image" %></th>
+          <th><%= t "name" %></th>
+          <th><%= t ".author" %></th>
+          <th><%= t ".default-price" %>(<%= Settings.currency.usa %>)</th>
+          <th><%= t "edit" %></th>
+          <th><%= t "delete" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "book", collection: @books %>
+      </tbody>
+    </table>
+    <%= will_paginate @books %>
+  </div>
+</div>
