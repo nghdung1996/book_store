@@ -1,6 +1,7 @@
 max_page: 12
 author:
   max_page: 8
+  description: 80
 category:
   max_page: 8
 relation_book:
@@ -11,8 +12,6 @@ admin_list:
   max_page: 10
 text_area:
   row: 5
-author:
-  description: 80
 book:
   content: 100
   name: 40

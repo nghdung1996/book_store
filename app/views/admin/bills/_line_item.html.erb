@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= line_item.book.name.truncate(Settings.bill.book_name) %>
+  </td>
+  <td><%= line_item.book.default_price %> <%= Settings.currency.usa %></td>
+  <td><%= line_item.quantity %></td>
+  <td>
+    <%= line_item.book.default_price * line_item.quantity %>
+    <%= Settings.currency.usa %>
+  </td>
+</tr>

@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     resources :authors
     resources :categories
     resources :books
+    resources :bills
+    resources :users
   end
   get "admin", to: "admin/static_pages#index"
 end

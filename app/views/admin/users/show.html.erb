@@ -1,0 +1,22 @@
+<h2><%= t "name" %>: <%= @user.name %></h2>
+<h2><%= t "email" %>: <%= @user.email %></h2>
+<h2><%= t ".full_name" %>: <%= @user.full_name %></h2>
+<h2><%= t "address" %>: <%= @user.address %></h2>
+<h2><%= t "phone" %>: <%= @user.phone %></h2>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="title"><%= t ".all-bills" %></h2>
+    <div class="background-fff">
+      <table class="table table-bordered">
+        <tr>
+          <th><%= t ".bill_code" %></th>
+          <th><%= t ".create_date" %></th>
+          <th><%= t "total_price" %></th>
+          <th><%= t "detail" %></th>
+        </tr>
+        <%= render partial: "bill", collection: @bills %>
+      </table>
+    </div>
+  </div>
+</div>

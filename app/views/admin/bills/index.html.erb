@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="title"><%= t ".all-bills" %></h2>
+    <table id="mytable" class="table table-bordred table-striped">
+      <thead>
+        <th><%= t ".bill_code" %></th>
+        <th><%= t ".user" %></th>
+        <th><%= t ".create_date" %></th>
+        <th><%= t ".books" %></th>
+        <th><%= t "total_price" %></th>
+        <th><%= t "detail" %></th>
+      </thead>
+      <tbody>
+        <%= render partial: "bill", collection: @bills %>
+      </tbody>
+    </table>
+    <%= will_paginate @bills %>
+  </div>
+</div>

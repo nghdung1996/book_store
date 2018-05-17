@@ -54,6 +54,13 @@ en:
   categories: " Categories"
   delete_successfully: "Delete successfuly"
   can_not_delete: "Can't Delete"
+  users: " Users"
+  menu_bills: " Bills"
+  total_price: "Total Price"
+  detail: "Detail"
+  address: "Address"
+  phone: "Phone"
+  email: "Email"
   layouts:
     header:
       login: "Log In"
@@ -202,3 +209,21 @@ en:
         create-categogy: "Create Category"
       new:
         create-a-new-category: "Create a new category"
+    bills:
+      index:
+        bill_code: "Bill code"
+        user: "User"
+        create_date: "Create date"
+        books: "Books"
+      show:
+        bill_detail: "Bill detail"
+        info_address: "Info Address"
+        books_ordered: "Books Ordered"
+        book: "Book"
+        price: "Price"
+        quantity: "Quantity"
+    users:
+      show:
+        full_name: "Full name"
+        bill_code: "Bill code"
+        create_date: "Create date"

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= bill.id %></td>
+  <td><%= I18n.localize bill.created_at, format: :time_default %></td>
+  <td><%= bill.total_price %> <%= Settings.currency.usa %></td>
+  <td>
+    <%= link_to t("view"), admin_bill_path(bill),
+      class: "btn btn-info btn-sm" %>
+  </td>
+</tr>
